@@ -1,0 +1,30 @@
+# jar包
+*.jar
+
+# 库文件
+/libraries
+/cache
+
+# 日志
+*.log
+*.log.gz
+.console_history
+
+# 数据
+*.mca
+*.dat
+*.dat_old
+session.lock
+
+# 一些无关的配置
+banned-ips.json
+banned-players.json
+ops.json
+usercache.json
+version_history.json
+whitelist.json
+
+# 插件数据
+plugins/bStats
+plugins/MiniMOTD
+plugins/FastAsyncWorldEdit/schematics

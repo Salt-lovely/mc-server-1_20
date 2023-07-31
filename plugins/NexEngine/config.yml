@@ -1,0 +1,13 @@
+Plugin:
+  # Command names that will be registered as main plugin commands.
+  # Do not leave this empty. Split multiple names with a comma.
+  Command_Aliases: nexengine
+  # Localized plugin name. It's used in messages and with internal placeholders.
+  Name: NexEngine
+  # Plugin prefix. Used in messages.
+  # You can use %plugin_name_localized% placeholder for a plugin name.
+  Prefix: '#fdf35e%plugin_name%#d4d9d8 »'
+  # Sets the plugin language.
+  # It will use language config from the '/lang/' sub-folder for specified language code.
+  # By default uses your system's default locale.
+  Language: zh
