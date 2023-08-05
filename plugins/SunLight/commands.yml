@@ -1,0 +1,249 @@
+# Here you can create your own shortcuts for the SunLight main and module's sub-commands.
+# Shortcut syntax: 'shortcut1,shortcut2,etc: command arg1 arg2 etc'
+# Example #1: 'call,tpa: teleport request' will create two shortcuts: '/tpa' and '/call' for the '/teleport request' command.
+# Example #2: 'gmc: gamemode creative' will create '/gmc' shortcut for '/gamemode creative' command.
+Shortcuts:
+  clearender: enderchest clear
+  endersee,ec: enderchest open
+  more: item amount 64
+  rename: item name
+  relore: item lore
+  fix: item damage 0
+  createworld: worlds create
+  deleteworld: worlds delete
+  loadworld: worlds load
+  unloadworld: worlds unload
+  tpa,tpr,call: teleport request
+  tpi: teleport invite
+  tploc: teleport location
+  tpyes: teleport accept
+  tpno: teleport decline
+  clearinv: inventory clear
+  invsee: inventory open
+  gms: gamemode survival
+  gmc: gamemode creative
+  gma: gamemode adventure
+  gmsp: gamemode spectator
+  spawn: spawns teleport
+  setspawn: spawns create
+  delspawn: spawns delete
+  kit: kits get
+  kitlist: kits list
+  warp: warps teleport
+  setwarp: warps create
+  delwarp: warps delete
+  warplist: warps list
+  hat: equip head
+  rain: weather storm
+  sun: weather clear
+  thunder: weather thunder
+  ignite: fire add 1200
+  unignore: ignore remove
+  addignore: ignore add
+  ignorelist: ignore list
+  home: homes teleport
+  sethome: homes set
+  delhome: homes delete
+  homelist: homes list
+  visithome: homes visit
+  morning: time set 0
+  day: time set 6000
+  evening: time set 12000
+  night: time set 18000
+# Sets whether commands with similar names/aliases should be unregistered from the server
+# if they're overlaps with the SunLight commands.
+# Warning: Settings this on 'true' may result both positive and negative effects.
+Unregister_Conflicts: false
+# A list of SunLight (!) commands that won't be registered into the server at all.
+# You can put here any command alias from the 'Aliases' section.
+Disabled: []
+# Here you can create custom cooldowns for ALL server commands including command arguments.
+# ===== Options Description =====
+# [Command] - This is command name to add cooldown for. It will auto-detect all its aliases and will work for all of them.
+# [Arguments] - List of additional arguments to be checked in command line. Each line = new argument.
+#         You can provide multiple arguments on the same line (split them with commas).
+#         It can be useful if argument has aliases like: '/home teleport' and '/home tp', where 'teleport' and 'tp' does the same thing.
+#         If arguments amount is greater than in executed command, the cooldown will be skipped.
+#         If arguments amount is smaller or equals to arguments in executed command, the cooldown will be applied.
+# [Cooldown] - Rank-based cooldown (in seconds) before player can use this command again.
+#         If player has multiple ranks, the SMALLEST cooldown will be used.
+#         You can put cooldown as '-1' to make command one-timed.
+#         Set cooldown to 0 to disable it for certain rank(s).
+Cooldowns:
+  home_tp:
+    Command: homes
+    Arguments:
+    - teleport,tp
+    Cooldown:
+      vip: 10
+      default: 30
+  feed:
+    Command: feed
+    Arguments: []
+    Cooldown:
+      gold: 30
+      vip: 60
+  heal:
+    Command: heal
+    Arguments: []
+    Cooldown:
+      gold: 30
+      vip: 60
+Aliases:
+  anvil: anvil
+  air: air
+  back: back
+  condense: condense
+  deathback: dback,deathback
+  disposal: disposal
+  dimension: dim,dimension
+  enchant: enchant
+  enchanting: enchanting
+  enderchest: echest,enderchest
+  exp: xp,exp
+  extinguish: ext,extinguish
+  equip: equip
+  feed: feed
+  fire: fire
+  fly: fly
+  food: food
+  foodgod: foodgod
+  gamemode: gm,gamemode
+  god: god
+  heal: heal
+  ignore: ignore
+  inventory: inv,inventory
+  item: i,item
+  mob: mob
+  near: near
+  nick: nick
+  nomobtarget: nomobtarget
+  nophantom: nophantom
+  playerinfo: pinfo,playerinfo
+  playerlist: plist,playerlist
+  skull: skull
+  smite: smite
+  spawner: spawner
+  speed: speed
+  sudo: sudo
+  suicide: suicide
+  time: time
+  teleport: tp,teleport
+  vanish: vanish
+  weather: weather
+  workbench: workbench
+Back:
+  # Sets how long (in seconds) back location will be stored before being removed & invalid.
+  Expire_Time: 3600
+  # Sets minimal distance between current and new player's locations to
+  # set or override current player's back location.
+  Min_Distance_Difference: 10.0
+  # A list of worlds, where back locations won't be saved.
+  # This setting can be bypassed with 'sunlight.command.back.bypass.worlds' permission
+  Disabled_Worlds:
+  - my_custom_world
+  # A list of teleport causes, that will be ignored for saving back location.
+  # This setting can be bypassed with 'sunlight.command.back.bypass.causes' permission
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html
+  Ignored_Causes:
+  - ENDER_PEARL
+DeathBack:
+  # Sets whether player's death location will be removed after use.
+  Reset_On_Use: true
+  # A list of worlds, where death back location won't be saved.
+  # This setting can be bypassed with 'sunlight.command.deathback.bypass.worlds' permission.
+  Disabled_Worlds:
+  - my_custom_world
+Disposal:
+  Menu:
+    # Sets the inventory title for disposal GUI.
+    Title: Disposal
+    # Sets the inventory size for disposal GUI. Must be multiply of 9 up to 54.
+    Size: 36
+God:
+  Disabled_Damage:
+    # A list of disabled damage sources for incoming damage.
+    # Available values: PLAYER, MOB, GENERIC
+    Incoming:
+    - GENERIC
+    - PLAYER
+    - MOB
+    # A list of disabled damage sources for outgoing damage.
+    # Available values: PLAYER, MOB, GENERIC
+    Outgoing:
+    - GENERIC
+    - PLAYER
+    - MOB
+  # A list of worlds, where GodMode will have no effect.
+  Disabled_Worlds:
+  - my_custom_world
+Item:
+  Amount:
+    # Sets default amount value if not specified in command.
+    Default_Value: 64
+Near:
+  # Sets the block radius to look for players in.
+  Radius: 100
+  # List format for nearby players.
+  # You can use PlaceholderAPI here.
+  # JSON is also supported: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  Format:
+  - '#ffeea2'
+  - '#ffeea2距离你 #fdba5e+%radius% #ffeea2个方块的玩家:'
+  - '#ffeea2'
+  - '#ffeea2▪ #fdba5e%player_name%: #ffeea2距离 %amount% 方块 <? show_text:"#ddecee点击发起传送请求." run_command:"/teleport request %player_name%" ?>#aefd5e[传送]</>'
+  - '#ffeea2'
+Nick:
+  # Sets minimal nick length for the '/nick changecommand.'
+  Min_Length: 2
+  # Sets maximal nick length for the '/nick changecommand.'
+  Max_Length: 20
+  # A list of words, that can not be used in custom nicks for the '/nick changecommand.'
+  Banned_Words:
+  - ass
+  - admin
+  - nigga
+  - dick
+  # Sets regex pattern that custom nick must match to be used.
+  # By default it accepts all EN-RU characters, numbers, spaces and underscore.
+  Regex: '[a-zA-Zа-яА-Я0-9_\s\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]*'
+PlayerInfo:
+  # Sets player info format.
+  # You can use PlaceholderAPI here.
+  # JSON is supported: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  Format:
+  - '#ffeea2'
+  - '#ffeea2&l用户信息:'
+  - '#ffeea2'
+  - '#ffeea2▪ #fdba5e用户名称: #ffeea2%player_name%'
+  - '#ffeea2▪ #fdba5e展示名称: #ffeea2%player_display_name%'
+  - '#ffeea2▪ #fdba5e在线: #ffeea2%is_online%'
+  - '#ffeea2▪ #fdba5e上次进服: #ffeea2%last_join%'
+  # - '#ffeea2▪ #fdba5e上次 IP: #ffeea2%ip%'
+  - '#ffeea2'
+  - '#ffeea2▪ #fdba5e位置: #ffeea2%location_x%, %location_y%, %location_z% in %location_world%'
+  - '#ffeea2▪ #fdba5e游戏模式: #ffeea2%game_mode%'
+  # - '#ffeea2▪ #fdba5eCan Fly: #ffeea2%can_fly%'
+  # - '#ffeea2▪ #fdba5eFood Level: #ffeea2%food_level%'
+  # - '#ffeea2▪ #fdba5eSaturation: #ffeea2%saturation%'
+  - '#ffeea2▪ #fdba5e生命值: #ffeea2%health%/%max_health%'
+  - '#ffeea2'
+PlayerList:
+  # Place your ranks in order from highest -> lowest for best results.
+  RankNames:
+    admins: '#fd5e5e管理员'
+    default: '#6c6c62玩家'
+  # Sets the format for player list.
+  # JSON is supported here: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  Format:
+  - '#ffeea2'
+  - '#ffeea2&l在线玩家:'
+  - '#ffeea2'
+  - '%rank% (%amount%): #d4d9d8%players%'
+  - '#ffeea2'
+  - '#ffeea2共计 #fdba5e%total%#ffeea2 个玩家在线.'
+  - '#ffeea2'
+Teleport:
+  Request:
+    # Sets how long (in seconds) teleport request will be valid to accept/decline it.
+    Timeout: 60

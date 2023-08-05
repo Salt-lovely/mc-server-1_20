@@ -8,33 +8,33 @@ Command:
   Usage:
   - <! prefix:"false" !>
   - '#d4d9d8'
-  - '#fd5e5eError: #d4d9d8Wrong arguments!'
+  - '#fd5e5eError: #d4d9d8参数错误!'
   - '#fd5e5eUsage: #fdf35e/%command_label% #ffeea2%command_usage%'
   - '#d4d9d8'
   Help:
     List:
     - <! prefix:"false" !>
     - '#d4d9d8'
-    - '#fdf35e&l%plugin_name_localized%#d4d9d8 - #fdf35e&lCommands:'
+    - '#fdf35e&l%plugin_name_localized%#d4d9d8 - #fdf35e&l指令:'
     - '#d4d9d8'
-    - '#fd5e5e&l<> #d4d9d8- Required, #aefd5e&l[] #d4d9d8- Optional.'
+    - '#fd5e5e&l<> #d4d9d8- 必须, #aefd5e&l[] #d4d9d8- 可选.'
     - '#d4d9d8'
     - '#ffeea2▪ #fdf35e/%command_label% #ffeea2%command_usage% #d4d9d8- %command_description%'
     - '#d4d9d8'
-    Desc: Show help page.
+    Desc: 显示帮助页面.
   About:
-    Desc: Some info about the plugin.
+    Desc: 插件相关信息.
   Reload:
-    Desc: Reload the whole plugin.
-    Done: All data & configuration has been reloaded!
+    Desc: 重载整个插件.
+    Done: 所有的数据与配置重载完成!
 Time:
-  Day: '%s%d.'
-  Hour: '%s%h.'
-  Min: '%s%min.'
-  Sec: '%s%sec.'
+  Day: '%s%d天.'
+  Hour: '%s%小时.'
+  Min: '%s%分钟.'
+  Sec: '%s%秒.'
 Other:
-  'Yes': '#aefd5eYes'
-  'No': '#fd5e5eNo'
+  'Yes': '#aefd5e是'
+  'No': '#fd5e5e否'
   Any: Any
   None: None
   Never: Never
@@ -43,44 +43,44 @@ Other:
   Infinity: ∞
 Error:
   Player:
-    Invalid: '#fd5e5ePlayer not found.'
+    Invalid: '#fd5e5e未找到玩家.'
   World:
-    Invalid: '#fd5e5eWorld not found.'
+    Invalid: '#fd5e5e未找到世界.'
   Number:
-    Invalid: '#fd5e5e%num% is not a valid number.'
+    Invalid: '#fd5e5e%num% 不是一个有效的数字.'
   Permission:
-    Deny: '#fd5e5eYou don''t have permissions to do that!'
+    Deny: '#fd5e5e你没有权限做这个!'
   Command:
-    Self: '#fd5e5eThis command is not applicable to yourself.'
-    Sender: '#fd5e5eThis command is for players only.'
+    Self: '#fd5e5e这个指令不能用在你自己身上.'
+    Sender: '#fd5e5e这个指令只能玩家使用.'
 Editor:
   Tip:
-    Exit: '<! prefix:"false" !><? showText:"#d4d9d8Click me or type #fd5e5e#exit" run_command:"/#exit" ?>#d4d9d8Click here to #fd5e5e[Exit Edit Mode]</>'
+    Exit: '<! prefix:"false" !><? showText:"#d4d9d8点我或者输入#fd5e5e#exit" run_command:"/#exit" ?>#d4d9d8点击这里#fd5e5e[退出编辑模式]</>'
   Title:
-    Done: '&a&lDone!'
+    Done: '&a&l完成!'
     Edit: '&a&l< Edit Mode >'
-    Error: '&c&lError!'
+    Error: '&c&l错误!'
   Error:
     Number:
-      Generic: '&7Invalid number!'
-      NotInt: '&7Number must be &cInteger&7!'
-    Enum: '&7Invalid type! See in chat.'
+      Generic: '&7无效数字!'
+      NotInt: '&7数字必须是&c整数&7!'
+    Enum: '&7无效类型! 请看聊天框.'
   Generic:
     Close:
-      Name: '#FF5733(✕) &lExit'
+      Name: '#FF5733(✕) &l退出'
       Lore: []
     Return:
-      Name: '#ffee9a(↓) &fReturn'
+      Name: '#ffee9a(↓) &f返回'
       Lore: []
     NextPage:
-      Name: '#e3fbf9(→) &lNext Page'
+      Name: '#e3fbf9(→) &l下一页'
       Lore: []
     PreviousPage:
-      Name: '#e3fbf9(←) &lPrevious Page'
+      Name: '#e3fbf9(←) &l上一页'
       Lore: []
 EntityType:
-  DROPPED_ITEM: Dropped Item
-  EXPERIENCE_ORB: Experience Orb
+  DROPPED_ITEM: 掉落物
+  EXPERIENCE_ORB: 经验球
   AREA_EFFECT_CLOUD: Area Effect Cloud
   ELDER_GUARDIAN: Elder Guardian
   WITHER_SKELETON: Wither Skeleton
@@ -116,48 +116,48 @@ EntityType:
   VEX: Vex
   VINDICATOR: Vindicator
   ILLUSIONER: Illusioner
-  MINECART_COMMAND: Minecart Command
-  BOAT: Boat
-  MINECART: Minecart
-  MINECART_CHEST: Minecart Chest
-  MINECART_FURNACE: Minecart Furnace
-  MINECART_TNT: Minecart Tnt
-  MINECART_HOPPER: Minecart Hopper
-  MINECART_MOB_SPAWNER: Minecart Mob Spawner
-  CREEPER: Creeper
-  SKELETON: Skeleton
-  SPIDER: Spider
-  GIANT: Giant
-  ZOMBIE: Zombie
-  SLIME: Slime
-  GHAST: Ghast
-  ZOMBIFIED_PIGLIN: Zombified Piglin
-  ENDERMAN: Enderman
-  CAVE_SPIDER: Cave Spider
-  SILVERFISH: Silverfish
-  BLAZE: Blaze
-  MAGMA_CUBE: Magma Cube
-  ENDER_DRAGON: Ender Dragon
-  WITHER: Wither
-  BAT: Bat
-  WITCH: Witch
-  ENDERMITE: Endermite
-  GUARDIAN: Guardian
-  SHULKER: Shulker
-  PIG: Pig
-  SHEEP: Sheep
-  COW: Cow
-  CHICKEN: Chicken
-  SQUID: Squid
-  WOLF: Wolf
-  MUSHROOM_COW: Mushroom Cow
-  SNOWMAN: Snowman
+  MINECART_COMMAND: 命令方块矿车
+  BOAT: 船
+  MINECART: 矿车
+  MINECART_CHEST: 箱子矿车
+  MINECART_FURNACE: 熔炉矿车
+  MINECART_TNT: TNT矿车
+  MINECART_HOPPER: 漏斗矿车
+  MINECART_MOB_SPAWNER: 刷怪笼矿车
+  CREEPER: 苦力怕
+  SKELETON: 骷髅
+  SPIDER: 蜘蛛
+  GIANT: 巨人
+  ZOMBIE: 僵尸
+  SLIME: 史莱姆
+  GHAST: 恶魂
+  ZOMBIFIED_PIGLIN: 僵尸猪灵
+  ENDERMAN: 末影人
+  CAVE_SPIDER: 洞穴蜘蛛
+  SILVERFISH: 蠹虫
+  BLAZE: 烈焰人
+  MAGMA_CUBE: 岩浆怪
+  ENDER_DRAGON: 末影龙
+  WITHER: 凋灵
+  BAT: 蝙蝠
+  WITCH: 女巫
+  ENDERMITE: 末影螨
+  GUARDIAN: 守卫者
+  SHULKER: 潜影贝
+  PIG: 猪
+  SHEEP: 羊
+  COW: 牛
+  CHICKEN: 鸡
+  SQUID: 乌贼
+  WOLF: 狼
+  MUSHROOM_COW: 蘑菇牛
+  SNOWMAN: 雪人
   OCELOT: Ocelot
-  IRON_GOLEM: Iron Golem
-  HORSE: Horse
-  RABBIT: Rabbit
-  POLAR_BEAR: Polar Bear
-  LLAMA: Llama
+  IRON_GOLEM: 铁傀儡
+  HORSE: 马
+  RABBIT: 兔
+  POLAR_BEAR: 北极熊
+  LLAMA: 羊驼
   LLAMA_SPIT: Llama Spit
   PARROT: Parrot
   VILLAGER: Villager
@@ -165,20 +165,20 @@ EntityType:
   TURTLE: Turtle
   PHANTOM: Phantom
   TRIDENT: Trident
-  COD: Cod
-  SALMON: Salmon
-  PUFFERFISH: Pufferfish
-  TROPICAL_FISH: Tropical Fish
-  DROWNED: Drowned
-  DOLPHIN: Dolphin
-  CAT: Cat
-  PANDA: Panda
-  PILLAGER: Pillager
+  COD: 鳕鱼
+  SALMON: 鲑鱼
+  PUFFERFISH: 河豚
+  TROPICAL_FISH: 热带鱼
+  DROWNED: 溺尸
+  DOLPHIN: 海豚
+  CAT: 猫
+  PANDA: 熊猫
+  PILLAGER: 灾厄村民
   RAVAGER: Ravager
-  TRADER_LLAMA: Trader Llama
-  WANDERING_TRADER: Wandering Trader
-  FOX: Fox
-  BEE: Bee
+  TRADER_LLAMA: 行商羊驼
+  WANDERING_TRADER: 流浪商人
+  FOX: 狐狸
+  BEE: 蜜蜂
   HOGLIN: Hoglin
   PIGLIN: Piglin
   STRIDER: Strider
@@ -191,19 +191,19 @@ EntityType:
   MARKER: Marker
   ALLAY: Allay
   CHEST_BOAT: Chest Boat
-  FROG: Frog
+  FROG: 青蛙
   TADPOLE: Tadpole
   WARDEN: Warden
-  CAMEL: Camel
+  CAMEL: 骆驼
   BLOCK_DISPLAY: Block Display
   INTERACTION: Interaction
   ITEM_DISPLAY: Item Display
   SNIFFER: Sniffer
   TEXT_DISPLAY: Text Display
-  FISHING_HOOK: Fishing Hook
-  LIGHTNING: Lightning
-  PLAYER: Player
-  UNKNOWN: Unknown
+  FISHING_HOOK: 鱼漂
+  LIGHTNING: 闪电
+  PLAYER: 玩家
+  UNKNOWN: 未知
 Material:
   AIR: Air
   STONE: Stone
@@ -1608,76 +1608,78 @@ Material:
   POTTED_AZALEA_BUSH: Potted Azalea Bush
   POTTED_FLOWERING_AZALEA_BUSH: Potted Flowering Azalea Bush
 PotionEffectType:
-  SPEED: Speed
-  SLOW: Slow
-  FAST_DIGGING: Fast Digging
-  SLOW_DIGGING: Slow Digging
-  INCREASE_DAMAGE: Increase Damage
-  HEAL: Heal
-  HARM: Harm
-  JUMP: Jump
-  CONFUSION: Confusion
-  REGENERATION: Regeneration
-  DAMAGE_RESISTANCE: Damage Resistance
-  FIRE_RESISTANCE: Fire Resistance
-  WATER_BREATHING: Water Breathing
-  INVISIBILITY: Invisibility
-  BLINDNESS: Blindness
-  NIGHT_VISION: Night Vision
-  HUNGER: Hunger
-  WEAKNESS: Weakness
-  POISON: Poison
-  WITHER: Wither
-  HEALTH_BOOST: Health Boost
-  ABSORPTION: Absorption
-  SATURATION: Saturation
-  GLOWING: Glowing
-  LEVITATION: Levitation
-  LUCK: Luck
-  UNLUCK: Unluck
-  SLOW_FALLING: Slow Falling
-  CONDUIT_POWER: Conduit Power
-  DOLPHINS_GRACE: Dolphins Grace
-  BAD_OMEN: Bad Omen
-  HERO_OF_THE_VILLAGE: Hero Of The Village
-  DARKNESS: Darkness
+  SPEED: 速度
+  SLOW: 缓慢
+  FAST_DIGGING: 急迫
+  SLOW_DIGGING: 挖掘疲劳
+  INCREASE_DAMAGE: 力量
+  HEAL: 治疗
+  HARM: 伤害
+  JUMP: 跳跃
+  CONFUSION: 反胃
+  REGENERATION: 生命恢复
+  DAMAGE_RESISTANCE: 抗性提升
+  FIRE_RESISTANCE: 抗火
+  WATER_BREATHING: 水中呼吸
+  INVISIBILITY: 隐身
+  BLINDNESS: 失明
+  NIGHT_VISION: 夜视
+  HUNGER: 饥饿
+  WEAKNESS: 虚弱
+  POISON: 中毒
+  WITHER: 凋零
+  HEALTH_BOOST: 生命提升
+  ABSORPTION: 伤害吸收
+  SATURATION: 饱和
+  GLOWING: 发光
+  LEVITATION: 飘浮
+  LUCK: 幸运
+  UNLUCK: 不幸
+  SLOW_FALLING: 缓降
+  CONDUIT_POWER: 潮涌能量
+  DOLPHINS_GRACE: 海豚恩惠
+  BAD_OMEN: 不祥之兆
+  HERO_OF_THE_VILLAGE: 村庄英雄
+  DARKNESS: 黑暗
 Enchantment:
-  fire_protection: Fire Protection
-  sharpness: Sharpness
+  fire_protection: 火焰保护
+  sharpness: 锋利
   flame: Flame
-  soul_speed: Soul Speed
+  soul_speed: 灵魂疾行
   aqua_affinity: Aqua Affinity
   punch: Punch
   loyalty: Loyalty
   depth_strider: Depth Strider
-  vanishing_curse: Vanishing Curse
-  unbreaking: Unbreaking
-  knockback: Knockback
+  vanishing_curse: 消失诅咒
+  unbreaking: 耐久
+  knockback: 击退
   luck_of_the_sea: Luck Of The Sea
-  binding_curse: Binding Curse
+  binding_curse: 绑定诅咒
   fortune: Fortune
-  protection: Protection
-  efficiency: Efficiency
-  mending: Mending
-  frost_walker: Frost Walker
+  protection: 保护
+  efficiency: 效率
+  mending: 经验修补
+  frost_walker: 冰霜行者
   lure: Lure
   looting: Looting
   piercing: Piercing
   blast_protection: Blast Protection
   smite: Smite
-  multishot: Multishot
+  multishot: 多重射击
   swift_sneak: Swift Sneak
   fire_aspect: Fire Aspect
   channeling: Channeling
   sweeping: Sweeping
-  thorns: Thorns
+  thorns: 荆棘
   bane_of_arthropods: Bane Of Arthropods
   respiration: Respiration
   riptide: Riptide
-  silk_touch: Silk Touch
+  silk_touch: 精准采集
   quick_charge: Quick Charge
-  projectile_protection: Projectile Protection
+  projectile_protection: 弹射物保护
   impaling: Impaling
-  feather_falling: Feather Falling
+  feather_falling: 缓降
   power: Power
-  infinity: Infinity
+  infinity: 无限
+World:
+  world: World

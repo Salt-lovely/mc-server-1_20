@@ -1,0 +1,3 @@
+# When 'true', binds all kit items to a player, who used that kit.
+# Items that are bound to certain player can not be used/picked up by others.
+Bind_Items_To_Players: false

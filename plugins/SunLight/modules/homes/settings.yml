@@ -1,0 +1,27 @@
+Data:
+  # Sets how often (in seconds) homes loaded for offline users will be removed from the memory.
+  Cleanup_Interval: 900
+Creation:
+  # When 'true', calls a BlockCanBuildEvent to check if player is out of other claims/protection zones.
+  Check_Build_Access: true
+  # A list of worlds, where homes can not be created.
+  World_Blacklist:
+  - world_name
+  - another_world
+  # A list of WorldGuard regions, where homes can not be created.
+  Region_Blacklist:
+  - pvp_arena
+  # Amount of possible homes to create for certain permission groups.
+  # If player is in multiple groups listed here, the greater value will be used.
+  # If player is not in any group listed here, the 'default' value will be used if present.
+  # -*-
+  # If you want to use this based on player's permissions rather than groups, you can do so by
+  # giving 'sunlight.homes.amount.[name]' permission, where '[name]' is name from this list.
+  # Make sure to use names that are different to your permission groups. Otherwise they will be overriden.
+  # -*-
+  # You must have Vault and permissions plugin installed for this feature to work.
+  # Use '-1' for unlimited amount.
+  Amount_Per_Rank:
+    admin: 3
+    default: 3
+    premium: 3

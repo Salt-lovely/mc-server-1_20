@@ -1,0 +1,31 @@
+Inventory_Split:
+  # Enables Inventory Split feature for different inventories per world.
+  Enabled: false
+  # List of Inventory Types that are affected by the Split feature.
+  # Allowed values: ENDER_CHEST, PLAYER
+  Affected_Inventories:
+  - PLAYER
+  - ENDER_CHEST
+  # List of custom world groups, that will share the same inventories in that worlds.
+  World_Groups:
+    creative:
+    - world_creative
+    survival:
+    - world_nether
+    - world
+    - world_the_end
+Command_Blocker:
+  # Sets whether or not certain commands should be blocked in specified worlds.
+  Enabled: false
+  # List of worlds and commands that will be disabled in that worlds.
+  # This can be bypassed with 'sunlight.worlds.bypass.commands' permission.
+  # You only need to put one alias for each command. It will auto-detect all other aliases and block them too.
+  World_Commands:
+    world_custom:
+    - god
+    - fly
+# List of worlds, where players can not fly.
+# This can be bypassed with 'sunlight.worlds.bypass.fly' permission.
+NoFlyWorlds:
+- world1
+- world2

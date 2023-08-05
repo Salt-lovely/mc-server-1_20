@@ -5,7 +5,7 @@ Plugin:
   # Sets the plugin language.
   # It will use language config from the '/lang/' sub-folder for specified language code.
   # By default uses your system's default locale.
-  Language: en
+  Language: zh
   # Localized plugin name. It's used in messages and with internal placeholders.
   Name: NexAuth
   # Plugin prefix. Used in messages.
@@ -131,7 +131,7 @@ Security:
     Max_Length: 32
     # Sets how many upper-case letters a password must have.
     # [Example] 'aaaaaa' - NOT OK, 'AaAaAa' - OK.
-    Min_UpperCase_Letters: 2
+    Min_UpperCase_Letters: 0
     # Sets how many lower-case letters a password must have.
     # [Example] 'AAAAAA' - NOT OK, 'AaAaAa' - OK.
     Min_LowerCase_Letters: 1

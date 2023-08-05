@@ -15,6 +15,10 @@
 *.dat
 *.dat_old
 session.lock
+advancements/*.json
+stats/*.json
+
+*.db
 
 # 一些无关的配置
 banned-ips.json

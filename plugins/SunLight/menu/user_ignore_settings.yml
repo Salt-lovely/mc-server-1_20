@@ -1,0 +1,60 @@
+Title: '#5d6d7e&l      忽略设置'
+Size: 36
+Inventory_Type: CHEST
+Use_Mini_Message: false
+
+Content:
+  return:
+    Item:
+      Material: PLAYER_HEAD
+      Head_Texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU5YWU3YTRiZTY1ZmNiYWVlNjUxODEzODlhMmY3ZDQ3ZTJlMzI2ZGI1OWVhM2ViNzg5YTkyYzg1ZWE0NiJ9fX0=
+      Name: '#e6e4dd(↓) &f返回'
+      Lore: []
+    Slots: 31
+    Type: RETURN
+
+  chat:
+    Item:
+      Material: MAP
+      Name: '#ee9aff&l隐藏聊天'
+      Lore:
+        - '#ee9aff▪ #ddecee启用: #ee9aff%hide_chat%'
+        - ''
+        - '#ddecee如果启用, 将隐藏这名'
+        - '#ddecee玩家的所有聊天记录.'
+        - ''
+        - '#9af7ff&l操作:'
+        - '#9af7ff▪ #ddecee左键点击: #9af7ff切换'
+    Slots: 10
+    Type: HIDE_CHAT
+
+  private_messages:
+    Item:
+      Material: WRITABLE_BOOK
+      Name: '#ee9aff&l拒绝私信'
+      Lore:
+        - '#ee9aff▪ #ddecee启用: #ee9aff%deny_conversations%'
+        - ''
+        - '#ddecee如果启用, 将拒绝这名'
+        - '#ddecee玩家的所有私信.'
+        - ''
+        - '#9af7ff&l操作:'
+        - '#9af7ff▪ #ddecee左键点击: #9af7ffToggle'
+    Slots: 13
+    Type: DENY_CONVERSATIONS
+
+  teleport_requests:
+    Item:
+      Material: ENDER_PEARL
+      Name: '#ee9aff&lDeny Teleports'
+      Lore:
+        - '#ee9aff▪ #ddecee启用: #ee9aff%deny_teleports%'
+        - ''
+        - '#ddecee如果启用, 将拒绝这名'
+        - '#ddecee玩家的所有传送请求.'
+        - ''
+        - '#9af7ff&l操作:'
+        - '#9af7ff▪ #ddecee左键点击: #9af7ffToggle'
+    Slots: 16
+    Type: DENY_TELEPORTS
+

@@ -1,0 +1,151 @@
+local:
+  # Channel display name.
+  Name: '&b附近'
+  # Sets if this channel is default channel.
+  # Default channel is used when player does not specify any channel in message via prefix or command.
+  # You must have at least ONE default channel.
+  Default: false
+  # When enabled, players will automatically join this channel on server join.
+  # Player must have channel permission to be able to join it (if enabled).
+  Auto_Join: true
+  Permission_Required:
+    # When enabled, players will must have permission to be able to read (receive) messages in this channel, as well as ability to join it.
+    Hear: false
+    # When enabled, players will must have permission to be able to write messages in this channel.
+    Speak: false
+  # Sets reach distance for channel messages.
+  # All players in that radius from a player who sent message will be able to see it.
+  # Set this to -1 to make channel server-wide.
+  Radius: 128
+  # Sets custom command-shortcut to join/write this channel.
+  # Do not leave this empty.
+  Command_Alias: local
+  # Sets custom message prefix for this channel.
+  # This prefix can be used at a start of message to write in this channel.
+  # Leave this empty ('') to disable.
+  Message_Prefix: '!'
+  # Sets per-player messages cooldown (in seconds) for this channel.
+  # Set this to 0 to disable.
+  Message_Cooldown: 1
+  # Sets the chat format for the channel.
+  # PlaceholderAPI is supported here.
+  # JSON Formatting is allowed: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  # Channel Placeholders:
+  # %channel_id% - Channel unique identifier.
+  # %channel_name% - Channel display name.
+  # %channel_radius% - Channel message radius.
+  Format: '<? suggest_command:"/local" show_text:"&f点击加入&b附近&f频道<newline>&b附近&f频道只有128格内的玩家能听到" ?>&7[%channel_name%&7]</> &f%format_player_name%%format_player_color%: %format_player_message%'
+
+global:
+  # Channel display name.
+  Name: '&6聊天'
+  # Sets if this channel is default channel.
+  # Default channel is used when player does not specify any channel in message via prefix or command.
+  # You must have at least ONE default channel.
+  Default: true
+  # When enabled, players will automatically join this channel on server join.
+  # Player must have channel permission to be able to join it (if enabled).
+  Auto_Join: true
+  Permission_Required:
+    # When enabled, players will must have permission to be able to read (receive) messages in this channel, as well as ability to join it.
+    Hear: false
+    # When enabled, players will must have permission to be able to write messages in this channel.
+    Speak: false
+  # Sets reach distance for channel messages.
+  # All players in that radius from a player who sent message will be able to see it.
+  # Set this to -1 to make channel server-wide.
+  Radius: -1
+  # Sets custom command-shortcut to join/write this channel.
+  # Do not leave this empty.
+  Command_Alias: global
+  # Sets custom message prefix for this channel.
+  # This prefix can be used at a start of message to write in this channel.
+  # Leave this empty ('') to disable.
+  Message_Prefix: ''
+  # Sets per-player messages cooldown (in seconds) for this channel.
+  # Set this to 0 to disable.
+  Message_Cooldown: 3
+  # Sets the chat format for the channel.
+  # PlaceholderAPI is supported here.
+  # JSON Formatting is allowed: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  # Channel Placeholders:
+  # %channel_id% - Channel unique identifier.
+  # %channel_name% - Channel display name.
+  # %channel_radius% - Channel message radius.
+  Format: '<? suggest_command:"/global" show_text:"&f点击加入&6聊天&f频道" ?>&7[%channel_name%&7]</> &f%format_player_name%%format_player_color%: %format_player_message%'
+
+trade:
+  # Channel display name.
+  Name: '&2交易'
+  # Sets if this channel is default channel.
+  # Default channel is used when player does not specify any channel in message via prefix or command.
+  # You must have at least ONE default channel.
+  Default: false
+  # When enabled, players will automatically join this channel on server join.
+  # Player must have channel permission to be able to join it (if enabled).
+  Auto_Join: true
+  Permission_Required:
+    # When enabled, players will must have permission to be able to read (receive) messages in this channel, as well as ability to join it.
+    Hear: false
+    # When enabled, players will must have permission to be able to write messages in this channel.
+    Speak: false
+  # Sets reach distance for channel messages.
+  # All players in that radius from a player who sent message will be able to see it.
+  # Set this to -1 to make channel server-wide.
+  Radius: -1
+  # Sets custom command-shortcut to join/write this channel.
+  # Do not leave this empty.
+  Command_Alias: trade
+  # Sets custom message prefix for this channel.
+  # This prefix can be used at a start of message to write in this channel.
+  # Leave this empty ('') to disable.
+  Message_Prefix: $
+  # Sets per-player messages cooldown (in seconds) for this channel.
+  # Set this to 0 to disable.
+  Message_Cooldown: 10
+  # Sets the chat format for the channel.
+  # PlaceholderAPI is supported here.
+  # JSON Formatting is allowed: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  # Channel Placeholders:
+  # %channel_id% - Channel unique identifier.
+  # %channel_name% - Channel display name.
+  # %channel_radius% - Channel message radius.
+  Format: '<? suggest_command:"/trade" show_text:"&f点击加入&2交易&f频道<newline>&2交易&f频道聊天间隔较大，请注意" ?>&6[%channel_name%&6]</> &f%format_player_name%%format_player_color%: %format_player_message%'
+
+staff:
+  # Channel display name.
+  Name: '&c管理员'
+  # Sets if this channel is default channel.
+  # Default channel is used when player does not specify any channel in message via prefix or command.
+  # You must have at least ONE default channel.
+  Default: false
+  # When enabled, players will automatically join this channel on server join.
+  # Player must have channel permission to be able to join it (if enabled).
+  Auto_Join: false
+  Permission_Required:
+    # When enabled, players will must have permission to be able to read (receive) messages in this channel, as well as ability to join it.
+    Hear: true
+    # When enabled, players will must have permission to be able to write messages in this channel.
+    Speak: true
+  # Sets reach distance for channel messages.
+  # All players in that radius from a player who sent message will be able to see it.
+  # Set this to -1 to make channel server-wide.
+  Radius: -1
+  # Sets custom command-shortcut to join/write this channel.
+  # Do not leave this empty.
+  Command_Alias: staffchat
+  # Sets custom message prefix for this channel.
+  # This prefix can be used at a start of message to write in this channel.
+  # Leave this empty ('') to disable.
+  Message_Prefix: ''
+  # Sets per-player messages cooldown (in seconds) for this channel.
+  # Set this to 0 to disable.
+  Message_Cooldown: 0
+  # Sets the chat format for the channel.
+  # PlaceholderAPI is supported here.
+  # JSON Formatting is allowed: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting
+  # Channel Placeholders:
+  # %channel_id% - Channel unique identifier.
+  # %channel_name% - Channel display name.
+  # %channel_radius% - Channel message radius.
+  Format: '&c[%channel_name%&c] &7%format_player_name%%format_player_color%: %format_player_message%'

@@ -1,0 +1,36 @@
+WakeUp:
+  # Sets how many interactions player have to do in order to leave AFK mode.
+  Threshold: 3
+  # Sets period of time (in seconds) for player interactions (see above).
+  # Example: By default player have to do 3 interactions in 5 seconds to reset their AFK mode.
+  Timeout: 5
+  # A list of commands to execute when player leaves AFK mode.
+  # Use '%player_name%' for player name.
+  # You can use PlaceholderAPI here.
+  Commands: []
+AFK:
+  # Sets period of time (in seconds) while player will be unable to enter AFK mode for idleness after leaving it.
+  Cooldown: 60
+  Placeholder:
+    # Sets the placeholder text for a player in AFK mode.
+    # Use '%time%' placeholder to display AFK time.
+    In: '#d4d9d8 挂机 %time%'
+    # Sets the placeholder text for a player in NO AFK mode.
+    Out: ''
+  # List of permission group based times (in seconds) for auto-enter AFK mode for idleness.
+  # Use '-1' to make players never auto-enter AFK mode.
+  Idle_Time:
+    default: 300
+  # List of permission group based times (in seconds) for kicking AFK mode players staying there too long.
+  # Use '-1' to make players never kick AFK players.
+  Kick_Time:
+    default: 1200
+  # Message displayed to player on disconnect window when kicked for being AFK long enough.
+  Kick_Message:
+  - '#fd5e5e您因为挂机时间太长而被踢出游戏!'
+  - ''
+  - '#ffeea2&n请重新加入游戏.'
+  # A list of commands to execute when player enters AFK mode.
+  # Use '%player_name%' for player name.
+  # You can use PlaceholderAPI here.
+  Commands: []

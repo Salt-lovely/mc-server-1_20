@@ -1,0 +1,58 @@
+Tablist:
+  # How often (in ticks) tab list should be updated?
+  # 1 second = 20 ticks.
+  # This will update both Tablist Format and Tablist Names.
+  Update_Interval: 1
+  # Player tab list format based on their permission group and other conditions.
+  # If player has multiple groups, format with the highest priority will be used.
+  # Format 'default' will be used if no other formats are available. It's safe to remove it.
+  # Put '*' to 'Groups' and/or 'Worlds' options to include all possible worlds/groups.
+  # To insert animation, use '%animation:[name]%' format. Where [name] is animation name from animations config.
+  # You can use PlaceholderAPI here.
+  Format:
+    default:
+      Priority: 1
+      Worlds:
+      - '*'
+      Groups:
+      - '*'
+      Header:
+      - '#d2d2d2%server_time_d MMMM%, %server_time_HH:mm:ss%'
+      - '&7'
+      Footer:
+      - '%animation:foot_1%'
+      - '%animation:foot_2%'
+      - '%animation:foot_3%'
+  # Player tab name format based on their permission group.
+  # If player has multiple groups, format with the highest priority will be used.
+  # Format 'default' will be used if no other formats are available. It's safe to remove it.
+  # You can use PlaceholderAPI here.
+  # IMPORTANT: To make tab sort players by ranks, you have to setup 'Nametags.Groups' section below with the same groups as here!
+  Player_Names:
+    admin:
+      Priority: 100
+      Format: '#ff2525[管理员] #a8a8a8%player_display_name%'
+    default:
+      Priority: 1
+      Format: '#a8a8a8%player_display_name%'
+      # Format: '#b8fff9[玩家] #a8a8a8%player_display_name%'
+Nametags:
+  # How often (in ticks) player nametags should be updated?
+  # 1 second = 20 ticks.
+  Update_Interval: 300
+  # Player nametag format based on their permission group.
+  # If player has multiple groups, format with the highest priority will be used.
+  # Format 'default' will be used if no other formats are available. It's safe to remove it.
+  # You can use PlaceholderAPI for 'Prefix' and 'Suffix' options.
+  # List of available colors: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html
+  Groups:
+    admin:
+      Priority: 100
+      Prefix: '#ff2525管理员 '
+      Suffix: ' #ff2525$%vault_eco_balance_formatted%'
+      Color: GRAY
+    default:
+      Priority: 1
+      Prefix: '#b8fff9玩家 '
+      Suffix: ' #b8fff9$%vault_eco_balance_formatted%'
+      Color: GRAY

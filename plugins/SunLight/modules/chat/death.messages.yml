@@ -1,0 +1,179 @@
+# Sets the range for death messages.
+# Set to 0 for a world-wide messages.
+# Set to -1 for a server-wide messages.
+# Set other value for certain blocks distance.
+Range: -1
+# A list of all custom death messages. Here you can add or remove messages.
+# Use DamageCause as a primary key for messages section: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+# For next levels, you can specify last attacker name/type as a key for different messages:
+# - BLOCK_EXPLOSION, CONTACT, FALLING_BLOCK, SUFFOCATION -> Material Name: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# - ENTITY_ATTACK, ENTITY_SWEEP_ATTACK, ENTITY_EXPLODE, PROJECTILE -> Entity Type: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+# You can also use 'default' key for all other damagers/sources.
+# There is also a bit of internal placeholders:
+# - All Player Placeholders from https://github.com/nulli0n/NexEngine-spigot/wiki/Internal-Placeholders
+# - %damager% - For attacker/damager name.
+# PlaceholderAPI is supported in all messages.
+# JSON formatting is also supported in all messages: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config#json-formatting,
+List:
+  BLOCK_EXPLOSION:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7爆炸了!'
+    TNT:
+    - '&7(&c☠&7) &c%player_display_name% &7在&cTNT&7爆炸中飞上了月亮!'
+  CONTACT:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7死因 &c%damager%&7.'
+    CACTUS:
+    - '&7(&c☠&7) &c%player_display_name% &7试图从&c%damager%&7里搞点水喝.'
+    - '&7(&c☠&7) &c%player_display_name% &7被&c%damager%&7扎死了.'
+  CRAMMING:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被挤死了.'
+  CUSTOM:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7不知道为什么... 总之死了'
+    - '&7(&c☠&7) &c%player_display_name% &7不想活了.'
+  DRAGON_BREATH:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7在&c龙息&7中融化了.'
+  DROWNING:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7溺水了.'
+    - '&7(&c☠&7) &c%player_display_name% &7忘记怎么游泳了.'
+  ENTITY_ATTACK:
+    default:
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c%damager%&7杀死了.'
+    PLAYER:
+    - '&7(&c⚔&7) &c%damager% &7咬死了 &c%player_display_name%'
+    - '&7(&c⚔&7) &c%damager% &7挠死了 &c%player_display_name%'
+    - '&7(&c⚔&7) &c%damager% &7捶死了 &c%player_display_name%'
+    - '&7(&c⚔&7) &c%damager% &7吓死了 &c%player_display_name%'
+    - '&7(&c⚔&7) &c%damager% &7砍死了 &c%player_display_name%'
+    BEE:
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c蜜蜂&7蜇死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c蜂&7淹没, 不知所措.'
+    BLAZE:
+    - '&7(&c⚔&7) &c%player_display_name% &7在与&c烈焰人&7的乒乓球比赛中获得了第二名的好成绩.'
+    - '&7(&c⚔&7) &c%player_display_name% &7在与&c烈焰人&7的乒乓球比赛中获得了第三名的好成绩&8, 第二名是另一个烈焰人.'
+    - '&7(&c⚔&7) &c%player_display_name% &7完美接住了&c烈焰人&7的火球, 不过用的是脑袋.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c烈焰人&7烤成七成熟.'
+    CAVE_SPIDER:
+    - '&7(&c⚔&7) &c%player_display_name% &7尝试变成&c蜘蛛&7侠, 不过事情不会总是那么完美.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c洞穴蜘蛛&7亲了一口, 负距离的那种.'
+    CHICKEN:
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c鸡哥&7... 啄死了'
+    - '&7(&c⚔&7) &c%player_display_name% &7额.. 被&c鸡&7... 干掉了'
+    DROWNED:
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c水鬼&7咬死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c水鬼&7挠死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c水鬼&7捶死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c水鬼&7吓死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c水鬼&7拖下水了...'
+    - '&7(&c⚔&7) &c%player_display_name% &7遇到了&c水鬼&7, 然后没有然后了...'
+    GHAST:
+    - '&7(&c⚔&7) &c%player_display_name% &7在与&c恶魂&7的羽毛球比赛中获得了第二名的好成绩.'
+    ENDERMAN:
+    - '&7(&c⚔&7) &c%player_display_name% &7与&c末影人&7眼神交流了一下, 不过&c末影人&7似乎理解错了.'
+    ZOMBIE:
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c僵尸&7咬死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c僵尸&7挠死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c僵尸&7捶死了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c僵尸&7吓死了.'
+    - '&7(&c⚔&7) &c僵尸&f打开了 &c%player_display_name% &7的脑袋, 失望离去.'
+    - '&7(&c⚔&7) &c%player_display_name% &7约&c僵尸&7跳双人舞, 不过看起来进展不太顺利...'
+    ZOMBIE_VILLAGER:
+    - '&7(&c⚔&7) &c%player_display_name%&7 tried to talk with &cZombie Villager&7.'
+    PIGLIN:
+    - '&7(&c⚔&7) &c%player_display_name% &7与&c猪灵&7的交易进展不利.'
+    - '&7(&c⚔&7) &c%player_display_name% &7被&c猪灵&7干掉了.'
+    PIGLIN_BRUTE:
+    - '&7(&c⚔&7) &c%player_display_name% &7与&c猪灵&7的交易... 进展相当不利.'
+    - '&7(&c⚔&7) &c%player_display_name% &7与&c猪灵&7谈判破裂, 然后被攻坚了.'
+    - '&7(&c⚔&7) &c%player_display_name% &7试图与&c猪灵兄贵&7玩深⛤黑⛤幻⛤想.'
+  ENTITY_SWEEP_ATTACK:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被&c%damager%&7干掉了.'
+  ENTITY_EXPLOSION:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被&c%damager%&7炸上了天.'
+    - '&7(&c☠&7) &c%player_display_name% &7与&c%damager%&7一起探索航天.'
+    CREEPER:
+    - '&7(&c☠&7) &c%player_display_name% &7多看了一眼&c苦力怕.'
+    - '&7(&c☠&7) &c%player_display_name% &7与&c苦力怕&7坠入爱河&8, 你说爱就好比~世间最锋利的凶器.'
+    - '&7(&c☠&7) &c%player_display_name% &7与&c苦力怕&7坠入爱河&8, 你说爱这东西~智者从不会靠近.'
+    - '&7(&c☠&7) &c%player_display_name% &7与&c苦力怕&7亲⛤密⛤接⛤触.'
+    - '&7(&c☠&7) &c%player_display_name% &7与&c苦⛤力⛤怕⛤酱&7爱的拥抱.'
+  FALL:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7啪唧一声摔在了地上.'
+    - '&7(&c☠&7) &c%player_display_name% &7尝试追逐天空, 但好像忘记带翅膀了.'
+  FALLING_BLOCK:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7遭到了 &c%damager%&7 的降维打击.'
+    ANVIL:
+    - '&7(&c☠&7) &c%player_display_name% &7没有接住 &c%damager%&7.'
+  FLY_INTO_WALL:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7撞上了南墙.'
+    - '&7(&c☠&7) &c%player_display_name% &7尝试Cosplay盾构机, 一切都很顺利, 除了ta自己.'
+  FIRE:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7烫烫烫烫烫烫.'
+    - '&7(&c☠&7) &c%player_display_name% &7把自己烤成了十成熟了.'
+    - '&7(&c☠&7) &c%player_display_name% &7现在已经十二成熟了.'
+  FIRE_TICK:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7烫烫烫烫烫烫烫烫烫烫烫烫.'
+    - '&7(&c☠&7) &c%player_display_name% &7把自己烤成了八成熟了.'
+    - '&7(&c☠&7) &c%player_display_name% &7被烤得金黄酥脆.'
+  FREEZE:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7尝试学习冰雪魔法, 不过出师不利.'
+    - '&7(&c☠&7) &c%player_display_name% &7现在是一根不错的冰棒.'
+  HOT_FLOOR:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7在&c岩浆块&7上蹦跶太久了.'
+    - '&7(&c☠&7) &c%player_display_name% &7把自己做成了美味板烧.'
+  LAVA:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7尝试在岩浆中游泳.'
+    - '&7(&c☠&7) &c%player_display_name% &7尝试在盐⛤酱中游泳.'
+  LIGHTNING:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被&c雷&7劈了.'
+  MAGIC:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被魔⛤法干掉了.'
+  POISON:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7吃错了药.'
+    - '&7(&c☠&7) &c%player_display_name% &7死了, 因为喝多了鸡汤.'
+  PROJECTILE:
+    default:
+    - '&7(&c⚔&7) &c%player_display_name% &7遭到了&c%damager%&7的射击.'
+    SKELETON:
+    - '&7(&c⚔&7) &c%player_display_name% &7被骷髅射成了刺猬.'
+  SONIC_BOOM:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7的耳膜爆炸了.'
+  STARVATION:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7饿死了.'
+  SUFFOCATION:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7种下了自己.'
+    - '&7(&c☠&7) &c%player_display_name% &7被埋起来了.'
+  SUICIDE:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7厌倦了这个无聊的世界.'
+    - '&7(&c☠&7) &c%player_display_name% &7结束了自己短暂却... 没什么意义的一生.'
+  THORNS:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7摸了一下&c%damager%&7然后死了.'
+  VOID:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7掉出了这个世界.'
+    - '&7(&c☠&7) &c%player_display_name% &7发现了世界的漏洞.'
+  WITHER:
+    default:
+    - '&7(&c☠&7) &c%player_display_name% &7被&c凋零&7了.'
